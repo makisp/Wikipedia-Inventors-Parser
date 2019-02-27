@@ -1,4 +1,4 @@
-app.controller("appController", ['$scope', '$rootScope', '$translate', '$route', '$location', function ($scope, $rootScope, $translate, $route, $location) {
+app.controller("appController", function ($scope, $rootScope, $route, $location) {
     /* ng-stats Calculates the Angular digest cycles. Used for debugging. */
     /*javascript: (function () {
         var a = document.createElement("script");
@@ -11,4 +11,4 @@ app.controller("appController", ['$scope', '$rootScope', '$translate', '$route',
 
     /* Inital appliction path */
     //$location.path('/home');
-}]);
+});

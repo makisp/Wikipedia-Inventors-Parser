@@ -1,2 +1,2 @@
-var app = angular.module("mainApp", ["ngRoute", "pascalprecht.translate", "ngAnimate", "ngSanitize"]);
+var app = angular.module("mainApp", ["ngRoute", "ngAnimate"]);
 var appPath = "app/components";
