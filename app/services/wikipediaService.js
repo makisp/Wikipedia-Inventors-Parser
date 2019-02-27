@@ -13,8 +13,9 @@ app.service('wikipediaService', ['$q', '$http', function ($q, $http) {
                 method: 'GET',
                 url: 'https://en.wikipedia.org/w/api.php?action=query&titles=List_of_inventors&prop=revisions&rvprop=content&rvslots=main&format=json',
                 headers: {
-                    'Access-Control-Allow-Origin': 'https://makisp.github.io/Wikipedia-Inventors-Parser/'
-                 }
+                    'Access-Control-Allow-Origin': '*'
+                 },
+                withCredentials: true,
             }).then(function successCallback(resp) {
                 var final = self.parseResponse(resp);
                 deferred.resolve(final);
