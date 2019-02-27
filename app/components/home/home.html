@@ -6,13 +6,18 @@
                 break/stop
                 working at
                 any time.</p>
-            <div class="mt-3 pb-1 d-flex justify-content-between animationIf" style="border-bottom: solid #333 2px;"
+            <div class="mt-3 pb-1 row justify-content-between animationIf" style="border-bottom: solid #333 2px;"
                 ng-show="result.length > 0">
-                <h6 class="m-0 c-light d-inline-block">Successfully
-                    fetched (<span class="text-danger">{{result.length}}</span>)
-                    inventors/inventions.
-                </h6>
-                <input type="text" class="pl-4" ng-model="searchText" placeholder="Search an inventor or invention." />
+                <div class="col-md-6 col-sm-12 p-2">
+                    <h6 class="m-0 c-light d-inline-block">Successfully
+                        fetched (<span class="text-danger">{{result.length}}</span>)
+                        inventors/inventions.
+                    </h6>
+                </div>
+                <div class="col-md-6 col-sm-12 p-2">
+                    <input type="text" class="ml-3 pl-4" ng-model="searchText"
+                        placeholder="Search an inventor or invention" />
+                </div>
             </div>
             <div class="mt-4 text-left animationIf" ng-repeat="item in result | filter: searchText track by $index">
                 <div>
